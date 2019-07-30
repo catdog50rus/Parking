@@ -57,39 +57,15 @@ namespace Parking
             var num = Console.ReadLine();
             Console.WriteLine("Введите марку нового автомобиля");
             var name = Console.ReadLine();
-            Console.WriteLine();
+            //Console.WriteLine();
 
             //parking[parking.Count - 1] = new Car() { Name = name, Number = num };
             parking.Add(new Car() { Name = name, Number = num });
-            Console.WriteLine($"Въехал новый автомобиль: {parking[parking.Count - 1]}");
-            Console.WriteLine();
-
-
+            //Console.WriteLine($"Въехал новый автомобиль: {parking[parking.Count - 1]}");
+            //Console.WriteLine();
 
             Parking.CarsOnParking(parking); //Машины на парковке
-
-
         }
-
-        //private static bool SeachCarOnParking(Parking parking, string carNum)
-        //{
-        //    //var outNum = Console.ReadLine();
-        //    if(parking[carNum]?.Number != null)
-        //    {
-        //        //parking.GoOut(parking[carNum]);
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine ($"Автомобиля с номером {carNum} на парковке нет!");
-        //        Console.WriteLine();
-        //        return false;
-        //    }
-
-
-        //    //return Console.ReadLine();
-        //}
-
     }
 }
 

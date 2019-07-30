@@ -54,6 +54,8 @@ namespace Parking
             if(_cars.Count < MAX_CARS)
             {
                 _cars.Add(car);
+                Console.WriteLine($"Въехал новый автомобиль: {car.Name}, номер {car.Number}");
+                Console.WriteLine();
                 return _cars.Count - 1;
             }
             return -1;
@@ -68,7 +70,7 @@ namespace Parking
             }
             if(car != null)
             {
-                Console.WriteLine ($"Выехал автомобиль {car.Name} номер {car.Number}");
+                Console.WriteLine($"Выехал автомобиль: {car.Name} номер {car.Number}");
                 Console.WriteLine();
                 _cars.Remove(car);
                 
@@ -107,7 +109,7 @@ namespace Parking
             Console.WriteLine();
         }
 
-        //Поиск машины на парковке
+        //Поиск машины на парковке по номеру
         public static bool SeachCarOnParking(Parking parking, string carNum)
         {
             if (parking[carNum]?.Number != null)
@@ -120,9 +122,6 @@ namespace Parking
                 Console.WriteLine();
                 return false;
             }
-
-
-            //return Console.ReadLine();
         }
 
         public class ParkingEnumerator
